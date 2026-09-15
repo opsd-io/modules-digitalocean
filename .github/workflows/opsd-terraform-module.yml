@@ -1,0 +1,15 @@
+name: Terraform module checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    uses: opsd-io/public-workflows/.github/workflows/terraform-module.yml@main
+    with:
+      working-directory: .
