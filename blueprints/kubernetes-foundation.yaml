@@ -1,0 +1,113 @@
+id: kubernetes-foundation
+title: Kubernetes foundation
+description: A provider-specific Kubernetes foundation for workloads and GitOps services.
+provider: digitalocean
+usecases:
+  - multi-service-platform
+  - gitops-base
+variants:
+  - id: kubernetes
+    title: Kubernetes
+    description: Provision Kubernetes with an optional bastion and platform services.
+    family: kubernetes
+    stack: kubernetes-foundation
+    components:
+      - VPC
+      - Kubernetes
+      - Project
+    capabilities:
+      immutable:
+        family: true
+        stack: true
+      editable:
+        compute_groups:
+          add: false
+          remove: false
+          scale: true
+          min_count: 1
+          max_count: 1
+          allowed_types:
+            - cluster
+          allowed_roles:
+            - kubernetes
+            - cluster
+          allowed_profiles:
+            - s-2vcpu-4gb
+        nodes:
+          add: true
+          remove: true
+          max_count: 10
+          allowed_types:
+            - vm
+          allowed_roles:
+            - bastion
+        databases:
+          add: true
+          remove: true
+          max_count: 2
+          allowed_engines:
+            - postgres
+            - mysql
+        caches:
+          add: true
+          remove: true
+          max_count: 1
+          allowed_engines:
+            - redis
+        load_balancers:
+          add: true
+          remove: true
+          max_count: 5
+        object_storage:
+          add: true
+          remove: true
+          max_count: 5
+        cdn_endpoints:
+          add: true
+          remove: true
+          max_count: 5
+    manifest:
+      defaults:
+        network: shared
+      layers:
+        core:
+          enabled: true
+        bootstrap:
+          argocd:
+            enabled: true
+        observability:
+          enabled: false
+        tools:
+          enabled: false
+        apps:
+          enabled: false
+      compute_groups:
+        - id: cluster
+          type: cluster
+          role: kubernetes
+          replicas: 1
+          profile: s-2vcpu-4gb
+          config:
+            kubernetes_version: latest
+            node_pool_name: default
+            node_size: s-2vcpu-4gb
+            node_count: 1
+            node_auto_scale: false
+            ha: false
+            create_vpc: true
+          delivery:
+            mode: gitops
+            source:
+              mode: github
+              github:
+                repository: replace-with-your-github-repository
+                branch: main
+            env: {}
+            secret_env: {}
+            bootstrap: {}
+      nodes: []
+      databases: []
+      caches: []
+      load_balancers: []
+      object_storage: []
+      cdn_endpoints: []
