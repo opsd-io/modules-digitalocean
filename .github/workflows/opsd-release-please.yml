@@ -13,4 +13,4 @@ jobs:
   release:
     uses: opsd-io/public-workflows/.github/workflows/release-please.yml@main
     with:
-      release-type: terraform-module
+      release-type: simple

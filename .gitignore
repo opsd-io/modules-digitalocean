@@ -1,0 +1,11 @@
+.terraform/
+.terraform.lock.hcl
+*.tfplan
+*.tfplan.*
+tfplan
+tfplan.txt
+crash.log
+crash.*.log
+*.tfstate
+*.tfstate.*
+.envrc.local
