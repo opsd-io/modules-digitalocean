@@ -10,6 +10,27 @@ permissions:
 
 jobs:
   checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        module:
+          - certificate
+          - container-registry
+          - dns-record
+          - dns-zone
+          - droplet
+          - firewall
+          - kubernetes
+          - load-balancer
+          - managed-database
+          - managed-mysql
+          - managed-postgres
+          - managed-redis
+          - project
+          - reserved-ip
+          - spaces
+          - spaces-with-cdn
+          - vpc
     uses: opsd-io/public-workflows/.github/workflows/terraform-module.yml@main
     with:
-      working-directory: .
+      working-directory: modules/${{ matrix.module }}
