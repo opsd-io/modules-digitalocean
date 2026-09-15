@@ -27,8 +27,4 @@ resource "digitalocean_kubernetes_cluster" "this" {
       duration   = var.maintenance_duration
     }
   }
-
-  lifecycle {
-    prevent_destroy = var.terraform_destroy_protection
-  }
 }

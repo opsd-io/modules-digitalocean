@@ -84,9 +84,3 @@ variable "eviction_policy" {
   type        = string
   default     = null
 }
-
-variable "terraform_destroy_protection" {
-  description = "Terraform-level protection against accidental destroy"
-  type        = bool
-  default     = false
-}

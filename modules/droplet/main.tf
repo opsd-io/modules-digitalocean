@@ -34,8 +34,4 @@ resource "digitalocean_droplet" "this" {
   droplet_agent     = var.droplet_agent
   graceful_shutdown = var.graceful_shutdown
   resize_disk       = var.resize_disk
-
-  lifecycle {
-    prevent_destroy = var.terraform_destroy_protection
-  }
 }

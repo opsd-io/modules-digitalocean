@@ -97,9 +97,3 @@ variable "create_app_user" {
   type        = bool
   default     = true
 }
-
-variable "terraform_destroy_protection" {
-  description = "Terraform-level protection against accidental destroy"
-  type        = bool
-  default     = false
-}

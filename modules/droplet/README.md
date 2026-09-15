@@ -10,7 +10,6 @@ Typical usage:
 Key capabilities:
 - attach additional block storage volumes (`volume_ids`)
 - install SSH keys through generated cloud-init user configuration
-- optionally enable Terraform-level destroy protection with `terraform_destroy_protection`
 
 Cloud-init precedence:
 - if `user_data` is set, module uses it directly

@@ -7,8 +7,4 @@ resource "digitalocean_spaces_bucket" "this" {
   versioning {
     enabled = var.versioning_enabled
   }
-
-  lifecycle {
-    prevent_destroy = var.terraform_destroy_protection
-  }
 }

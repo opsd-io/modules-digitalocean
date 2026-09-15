@@ -11,10 +11,9 @@ module "cluster" {
   project_id           = var.project_id
   tags                 = var.tags
 
-  maintenance_window_day       = var.maintenance_window_day
-  maintenance_window_hour      = var.maintenance_window_hour
-  backup_restore               = var.backup_restore
-  firewall_rules               = var.firewall_rules
-  eviction_policy              = var.eviction_policy
-  terraform_destroy_protection = var.terraform_destroy_protection
+  maintenance_window_day  = var.maintenance_window_day
+  maintenance_window_hour = var.maintenance_window_hour
+  backup_restore          = var.backup_restore
+  firewall_rules          = var.firewall_rules
+  eviction_policy         = var.eviction_policy
 }

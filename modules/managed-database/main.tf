@@ -26,10 +26,6 @@ resource "digitalocean_database_cluster" "this" {
       backup_created_at = try(backup_restore.value.backup_created_at, null)
     }
   }
-
-  lifecycle {
-    prevent_destroy = var.terraform_destroy_protection
-  }
 }
 
 resource "digitalocean_database_firewall" "this" {

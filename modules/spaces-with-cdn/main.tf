@@ -1,12 +1,11 @@
 module "spaces" {
   source = "../spaces"
 
-  bucket_name                  = var.bucket_name
-  region                       = var.region
-  acl                          = var.acl
-  force_destroy                = var.force_destroy
-  versioning_enabled           = var.versioning_enabled
-  terraform_destroy_protection = var.terraform_destroy_protection
+  bucket_name        = var.bucket_name
+  region             = var.region
+  acl                = var.acl
+  force_destroy      = var.force_destroy
+  versioning_enabled = var.versioning_enabled
 }
 
 resource "digitalocean_cdn" "this" {

@@ -26,9 +26,3 @@ variable "versioning_enabled" {
   type        = bool
   default     = true
 }
-
-variable "terraform_destroy_protection" {
-  description = "Terraform-level protection against accidental destroy"
-  type        = bool
-  default     = false
-}
