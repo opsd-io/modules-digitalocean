@@ -1,16 +1,16 @@
-# managed-redis
+# managed-valkey
 
-Redis wrapper over `managed-database`.
+Valkey wrapper over `managed-database`.
 
 ## What this module manages
 
-- Redis cluster via `managed-database`
+- Valkey cluster via `managed-database`
 - optional firewall rules (forwarded to core module)
 
 ## Key inputs
 
 - `name` (required)
-- `redis_version` (default `7`)
+- `valkey_version` (default `7`)
 - `region` (required)
 - `size` (default `db-s-1vcpu-1gb`)
 - `node_count`

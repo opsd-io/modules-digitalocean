@@ -25,7 +25,7 @@ jobs:
           - managed-database
           - managed-mysql
           - managed-postgres
-          - managed-redis
+          - managed-valkey
           - project
           - reserved-ip
           - spaces

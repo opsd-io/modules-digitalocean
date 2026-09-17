@@ -53,7 +53,7 @@ variants:
           remove: true
           max_count: 1
           allowed_engines:
-            - redis
+            - valkey
         load_balancers:
           add: true
           remove: true

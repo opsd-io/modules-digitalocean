@@ -4,7 +4,7 @@ variable "name" {
 }
 
 variable "engine" {
-  description = "Database engine (pg, mysql, redis, kafka, opensearch, valkey)"
+  description = "Database engine (pg, mysql, valkey, kafka, opensearch)"
   type        = string
 }
 

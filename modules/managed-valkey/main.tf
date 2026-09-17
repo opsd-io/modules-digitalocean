@@ -2,8 +2,8 @@ module "cluster" {
   source = "../managed-database"
 
   name                 = var.name
-  engine               = "redis"
-  engine_version       = var.redis_version
+  engine               = "valkey"
+  engine_version       = var.valkey_version
   region               = var.region
   size                 = var.size
   node_count           = var.node_count

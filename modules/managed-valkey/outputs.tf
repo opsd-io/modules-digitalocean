@@ -1,47 +1,47 @@
 output "cluster_id" {
-  description = "Redis cluster ID"
+  description = "Valkey cluster ID"
   value       = module.cluster.id
 }
 
 output "cluster_urn" {
-  description = "Redis cluster URN"
+  description = "Valkey cluster URN"
   value       = module.cluster.urn
 }
 
 output "urn" {
-  description = "Redis cluster URN"
+  description = "Valkey cluster URN"
   value       = module.cluster.urn
 }
 
 output "host" {
-  description = "Public Redis host"
+  description = "Public Valkey host"
   value       = module.cluster.host
 }
 
 output "private_host" {
-  description = "Private Redis host"
+  description = "Private Valkey host"
   value       = module.cluster.private_host
 }
 
 output "port" {
-  description = "Redis port"
+  description = "Valkey port"
   value       = module.cluster.port
 }
 
 output "password" {
-  description = "Redis password"
+  description = "Valkey password"
   value       = module.cluster.password
   sensitive   = true
 }
 
 output "uri" {
-  description = "Redis URI"
+  description = "Valkey URI"
   value       = module.cluster.uri
   sensitive   = true
 }
 
 output "private_uri" {
-  description = "Redis private URI"
+  description = "Valkey private URI"
   value       = module.cluster.private_uri
   sensitive   = true
 }
