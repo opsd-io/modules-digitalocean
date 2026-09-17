@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/opsd-io/modules-digitalocean/compare/v1.0.0...v2.0.0) (2026-09-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **modules:** rename Redis module to Valkey ([#7](https://github.com/opsd-io/modules-digitalocean/issues/7))
+
+### Features
+
+* **modules:** rename Redis module to Valkey ([#7](https://github.com/opsd-io/modules-digitalocean/issues/7)) ([a73a0c9](https://github.com/opsd-io/modules-digitalocean/commit/a73a0c9ba4b6d046c31fe97d0994c438b1d4b04a))
+
 ## 1.0.0 (2026-09-15)
 
 
