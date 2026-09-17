@@ -15,7 +15,7 @@ Engine-agnostic module for DigitalOcean managed database clusters.
 ## Key inputs
 
 - `name` (required)
-- `engine` (required) — for example `pg`, `mysql`, `redis`
+- `engine` (required) — for example `pg`, `mysql`, `valkey`
 - `engine_version` (optional)
 - `region` (required)
 - `size` (default `db-s-1vcpu-1gb`)
@@ -36,5 +36,5 @@ Engine-agnostic module for DigitalOcean managed database clusters.
 
 ## Notes
 
-- Prefer engine-specific wrappers (`managed-postgres`, `managed-mysql`, `managed-redis`) in scenarios.
+- Prefer engine-specific wrappers (`managed-postgres`, `managed-mysql`, `managed-valkey`) in scenarios.
 - Use this module directly only when you intentionally need a generic engine switch.

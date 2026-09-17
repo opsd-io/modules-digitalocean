@@ -1,10 +1,10 @@
 variable "name" {
-  description = "Redis cluster name"
+  description = "Valkey cluster name"
   type        = string
 }
 
-variable "redis_version" {
-  description = "Redis engine version"
+variable "valkey_version" {
+  description = "Valkey engine version"
   type        = string
   default     = "7"
 }
@@ -21,7 +21,7 @@ variable "size" {
 }
 
 variable "node_count" {
-  description = "Number of nodes in the Redis cluster"
+  description = "Number of nodes in the Valkey cluster"
   type        = number
   default     = 1
 }
@@ -66,7 +66,7 @@ variable "backup_restore" {
 }
 
 variable "firewall_rules" {
-  description = "Firewall rules for the Redis cluster"
+  description = "Firewall rules for the Valkey cluster"
   type = set(object({
     type  = string
     value = string
@@ -75,7 +75,7 @@ variable "firewall_rules" {
 }
 
 variable "eviction_policy" {
-  description = "Redis eviction policy"
+  description = "Valkey eviction policy"
   type        = string
   default     = null
 }
