@@ -4,11 +4,11 @@ resource "terraform_data" "wait_for_resources" {
   provisioner "local-exec" {
     command = "${path.module}/scripts/wait-for-resources.sh"
 
-    environment {
+    environment = {
       DIGITALOCEAN_TOKEN = var.digitalocean_token
       RESOURCE_URNS      = join("\n", var.resource_urns)
-      TIMEOUT_SECONDS    = var.timeout_seconds
-      POLL_INTERVAL      = var.poll_interval_seconds
+      TIMEOUT_SECONDS    = tostring(var.timeout_seconds)
+      POLL_INTERVAL      = tostring(var.poll_interval_seconds)
     }
   }
 }
