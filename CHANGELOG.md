@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.1](https://github.com/opsd-io/modules-digitalocean/compare/v2.1.0...v2.1.1) (2026-09-17)
+
+
+### Bug Fixes
+
+* **modules:** parse project resource urn types ([#11](https://github.com/opsd-io/modules-digitalocean/issues/11)) ([341222c](https://github.com/opsd-io/modules-digitalocean/commit/341222ceca0933d7764fea9ef5bd9b4c18ed5fab))
+* **modules:** parse resource urn types ([341222c](https://github.com/opsd-io/modules-digitalocean/commit/341222ceca0933d7764fea9ef5bd9b4c18ed5fab))
+
 ## [2.1.0](https://github.com/opsd-io/modules-digitalocean/compare/v2.0.0...v2.1.0) (2026-09-17)
 
 
