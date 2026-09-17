@@ -27,6 +27,7 @@ jobs:
           - managed-postgres
           - managed-valkey
           - project
+          - project-resources
           - reserved-ip
           - spaces
           - spaces-with-cdn
