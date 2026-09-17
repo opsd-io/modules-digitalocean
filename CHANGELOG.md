@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/opsd-io/modules-digitalocean/compare/v2.0.0...v2.1.0) (2026-09-17)
+
+
+### Features
+
+* **modules:** add project resource assignment module ([#9](https://github.com/opsd-io/modules-digitalocean/issues/9)) ([4c7d0d5](https://github.com/opsd-io/modules-digitalocean/commit/4c7d0d505023d83690de260964b9094f7d0b1a57))
+
 ## [2.0.0](https://github.com/opsd-io/modules-digitalocean/compare/v1.0.0...v2.0.0) (2026-09-17)
 
 
