@@ -7,6 +7,7 @@ deadline=$(( $(date +%s) + TIMEOUT_SECONDS ))
 resource_endpoint() {
   local urn="$1"
   local kind="${urn#*:}"
+  kind="${kind%%:*}"
   local id="${urn##*:}"
 
   case "$kind" in
