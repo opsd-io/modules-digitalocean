@@ -29,4 +29,11 @@ resource "digitalocean_database_user" "app" {
 
   cluster_id = module.cluster.id
   name       = var.app_user_name
+
+  lifecycle {
+    # The provider sends an empty user_settings payload while a cluster is
+    # upgraded, which DigitalOcean rejects. This module does not manage user
+    # settings after the user has been created.
+    ignore_changes = all
+  }
 }
