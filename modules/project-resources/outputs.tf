@@ -1,9 +1,9 @@
 output "project_id" {
   description = "DigitalOcean project ID"
-  value       = digitalocean_project_resources.this.project
+  value       = var.project_id
 }
 
 output "resource_urns" {
   description = "DigitalOcean resource URNs assigned to the project"
-  value       = digitalocean_project_resources.this.resources
+  value       = var.resource_urns
 }

@@ -13,10 +13,3 @@ resource "terraform_data" "wait_for_resources" {
     }
   }
 }
-
-resource "digitalocean_project_resources" "this" {
-  project   = var.project_id
-  resources = var.resource_urns
-
-  depends_on = [terraform_data.wait_for_resources]
-}
