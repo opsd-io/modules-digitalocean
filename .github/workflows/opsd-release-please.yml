@@ -15,3 +15,4 @@ jobs:
     with:
       release-type: simple
       initial-version: 0.1.0
+      release-as: 0.1.0
