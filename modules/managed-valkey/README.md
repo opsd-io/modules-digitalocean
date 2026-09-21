@@ -10,7 +10,7 @@ Valkey wrapper over `managed-database`.
 ## Key inputs
 
 - `name` (required)
-- `valkey_version` (default `7`)
+- `valkey_version` (default `8`)
 - `region` (required)
 - `size` (default `db-s-1vcpu-1gb`)
 - `node_count`

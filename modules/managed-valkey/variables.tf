@@ -6,7 +6,7 @@ variable "name" {
 variable "valkey_version" {
   description = "Valkey engine version"
   type        = string
-  default     = "7"
+  default     = "8"
 }
 
 variable "region" {

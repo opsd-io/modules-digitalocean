@@ -23,9 +23,3 @@ variable "is_default" {
   type        = bool
   default     = false
 }
-
-variable "resource_urns" {
-  description = "DigitalOcean resource URNs attached to the project"
-  type        = list(string)
-  default     = []
-}
