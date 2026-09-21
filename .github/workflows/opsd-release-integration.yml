@@ -42,7 +42,8 @@ jobs:
             -f "inputs[integration-tests-repository]=opsd-io/integration-tests" \
             -f "inputs[integration-tests-ref]=main" \
             -f "inputs[release-integration]=true" \
-            -f "inputs[release-component]=modules"
+            -f "inputs[release-component]=modules" \
+            -f "inputs[execution-mode]=plan"
           echo "request-id=${REQUEST_ID}" >> "${GITHUB_OUTPUT}"
 
       - name: Wait for private qualification
