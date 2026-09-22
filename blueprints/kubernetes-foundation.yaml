@@ -70,16 +70,15 @@ variants:
       defaults:
         network: shared
       layers:
-        core:
-          enabled: true
         bootstrap:
-          argocd:
-            enabled: true
-        observability:
+          enabled: true
+        infrastructure:
+          enabled: true
+        monitoring:
           enabled: false
         tools:
           enabled: false
-        apps:
+        applications:
           enabled: false
       compute_groups:
         - id: cluster
