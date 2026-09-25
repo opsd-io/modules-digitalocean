@@ -15,6 +15,7 @@ jobs:
       matrix:
         module:
           - certificate
+          - bastion
           - container-registry
           - dns-record
           - dns-zone
