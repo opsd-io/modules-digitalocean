@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/opsd-io/modules-digitalocean/compare/v0.1.0...v0.2.0) (2026-09-25)
+
+
+### Features
+
+* **modules:** add DOKS bastion module ([3e09446](https://github.com/opsd-io/modules-digitalocean/commit/3e094465a6cc54837d23371eca4a6291c4e20788))
+* **modules:** provision and harden DOKS bastion access ([#22](https://github.com/opsd-io/modules-digitalocean/issues/22)) ([3e09446](https://github.com/opsd-io/modules-digitalocean/commit/3e094465a6cc54837d23371eca4a6291c4e20788))
+
+
+### Bug Fixes
+
+* **modules:** align kubernetes layer defaults ([06cb905](https://github.com/opsd-io/modules-digitalocean/commit/06cb9051f4fbb2a060cac3190147b49cc08d6879))
+* **modules:** align Kubernetes layer defaults ([#20](https://github.com/opsd-io/modules-digitalocean/issues/20)) ([06cb905](https://github.com/opsd-io/modules-digitalocean/commit/06cb9051f4fbb2a060cac3190147b49cc08d6879))
+
 ## [0.1.0](https://github.com/opsd-io/modules-digitalocean/compare/v2.1.0...v0.1.0) (2026-09-21)
 
 
