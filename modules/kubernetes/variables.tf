@@ -109,3 +109,15 @@ variable "maintenance_duration" {
   type        = string
   default     = null
 }
+
+variable "control_plane_firewall_enabled" {
+  description = "Enable the DOKS control-plane firewall"
+  type        = bool
+  default     = false
+}
+
+variable "control_plane_firewall_allowed_addresses" {
+  description = "CIDR addresses allowed to reach the DOKS control plane"
+  type        = set(string)
+  default     = []
+}

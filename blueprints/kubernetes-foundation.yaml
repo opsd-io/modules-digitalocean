@@ -74,6 +74,12 @@ variants:
           enabled: true
         infrastructure:
           enabled: true
+          components:
+            bastion:
+              enabled: false
+              values:
+                user: bastion
+                egress_preset: web
         monitoring:
           enabled: false
         tools:

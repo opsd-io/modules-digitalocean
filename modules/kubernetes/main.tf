@@ -8,6 +8,14 @@ resource "digitalocean_kubernetes_cluster" "this" {
   surge_upgrade = var.surge_upgrade
   ha            = var.ha
 
+  dynamic "control_plane_firewall" {
+    for_each = var.control_plane_firewall_enabled ? [true] : []
+    content {
+      enabled           = true
+      allowed_addresses = var.control_plane_firewall_allowed_addresses
+    }
+  }
+
   node_pool {
     name       = var.node_pool_name
     size       = var.node_size
