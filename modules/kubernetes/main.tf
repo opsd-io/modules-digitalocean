@@ -1,12 +1,21 @@
 resource "digitalocean_kubernetes_cluster" "this" {
-  name          = var.name
-  region        = var.region
-  version       = var.kubernetes_version
-  vpc_uuid      = var.vpc_uuid
-  tags          = var.tags
-  auto_upgrade  = var.auto_upgrade
-  surge_upgrade = var.surge_upgrade
-  ha            = var.ha
+  name           = var.name
+  region         = var.region
+  version        = var.kubernetes_version
+  vpc_uuid       = var.vpc_uuid
+  cluster_subnet = var.cluster_subnet
+  service_subnet = var.service_subnet
+  tags           = var.tags
+  auto_upgrade   = var.auto_upgrade
+  surge_upgrade  = var.surge_upgrade
+  ha             = var.ha
+
+  lifecycle {
+    precondition {
+      condition     = (var.cluster_subnet == null) == (var.service_subnet == null)
+      error_message = "cluster_subnet and service_subnet must either both be set or both be null."
+    }
+  }
 
   dynamic "control_plane_firewall" {
     for_each = var.control_plane_firewall_enabled ? [true] : []
