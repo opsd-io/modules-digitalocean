@@ -20,6 +20,18 @@ variable "vpc_uuid" {
   default     = null
 }
 
+variable "cluster_subnet" {
+  description = "Optional RFC 1918 pod-network CIDR; set with service_subnet to enable VPC-native networking"
+  type        = string
+  default     = null
+}
+
+variable "service_subnet" {
+  description = "Optional RFC 1918 service-network CIDR; set with cluster_subnet to enable VPC-native networking"
+  type        = string
+  default     = null
+}
+
 variable "tags" {
   description = "Cluster tags"
   type        = set(string)
